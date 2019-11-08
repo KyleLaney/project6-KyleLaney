@@ -97,7 +97,7 @@ int SortingComparison::insertionSort(int a[], size_t size)
     }
 
 
-    return numOfComparison;  //******* MODIFY TO RETURN THE NUMBER OF COMPARISONS
+    return numOfComparison+1;  //******* MODIFY TO RETURN THE NUMBER OF COMPARISONS
 }
 
 
