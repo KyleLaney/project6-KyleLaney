@@ -96,6 +96,7 @@ private:
     int* values_; //an array of integer values to be sorted
     
     int quickSortnumOfComparison;
+    data_distribution _array_type;
 
 
 

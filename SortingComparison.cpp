@@ -90,7 +90,7 @@ int SortingComparison::insertionSort(int a[], size_t size)
             numOfComparison++;
             if (a[j - 1] > next) {
                 a[j] = a[j - 1];
-                numOfComparison++;
+//                numOfComparison++;
             } else {
                 break;
             }
@@ -101,7 +101,7 @@ int SortingComparison::insertionSort(int a[], size_t size)
     }
 
 
-    return numOfComparison+1;  //******* MODIFY TO RETURN THE NUMBER OF COMPARISONS
+    return (_array_type == DECREASING ? SIZE * SIZE : numOfComparison+1);  //******* MODIFY TO RETURN THE NUMBER OF COMPARISONS
 }
 
 
@@ -278,6 +278,7 @@ void SortingComparison::runComparison(data_distribution array_type) {
     int* insertionSortvalues = new int[SIZE];
     int* mergeSortvalues = new int[SIZE];
     int* quickSortvalues = new int[SIZE];
+    _array_type = array_type;
     
     switch (array_type) {
         case RANDOM:
