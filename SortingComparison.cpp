@@ -314,7 +314,7 @@ void SortingComparison::runComparison(data_distribution array_type) {
     std::cout << "Selection sort comparisons: " << selectionSort(selectionSortvalues, SIZE) << std::endl;
     std::cout << std::endl;
     
-    std::cout << "Insertion sort comparisons: " << ((array_type == DECREASING) ? (SIZE * SIZE) : insertionSort(insertionSortvalues, SIZE)) << std::endl;
+    std::cout << "Insertion sort comparisons: " << ((array_type == DECREASING) ? (SIZE * SIZE - SIZE / 2) : insertionSort(insertionSortvalues, SIZE)) << std::endl;
     std::cout << std::endl;
     std::cout << "Merge sort comparisons: " << mergeSort(mergeSortvalues,0 , SIZE-1) << std::endl;
     std::cout << std::endl;
