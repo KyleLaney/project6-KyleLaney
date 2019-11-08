@@ -267,8 +267,8 @@ int SortingComparison::quickSort(int a[], int from, int to)
 
   //*************  IMPLEMENT runComparison HERE!!!! ************//
 void SortingComparison::runComparison(data_distribution array_type) {
-    using namespace std;
     srand (time(NULL));
+    
     values_ = new int[SIZE];
     int* selectionSortvalues = new int[SIZE];
     int* insertionSortvalues = new int[SIZE];
@@ -305,22 +305,15 @@ void SortingComparison::runComparison(data_distribution array_type) {
         quickSortvalues[i] = values_[i];
     }
     
-//    int* selectionSortvalues = new int[SIZE];
-//    memcpy(selectionSortvalues, values_, SIZE);
-//
-//    int* insertionSortvalues = new int[SIZE];
-//    memcpy(insertionSortvalues, values_, SIZE);
-//
-//    int* mergeSortvalues = new int[SIZE];
-//    memcpy(mergeSortvalues, values_, SIZE);
-//
-//    int* quickSortvalues = new int[SIZE];
-//    memcpy(quickSortvalues, values_, SIZE);
     quickSortnumOfComparison = 0;
-    
+    std::cout << std::endl;
     std::cout << "Selection sort comparisons: " << selectionSort(selectionSortvalues, SIZE) << std::endl;
+    std::cout << std::endl;
     std::cout << "Insertion sort comparisons: " << insertionSort(insertionSortvalues, SIZE) << std::endl;
+    std::cout << std::endl;
     std::cout << "Merge sort comparisons: " << mergeSort(mergeSortvalues,0 , SIZE-1) << std::endl;
+    std::cout << std::endl;
     std::cout << "Quick sort comparisons: " << quickSort(quickSortvalues,0 , SIZE-1) << std::endl;
+    std::cout << std::endl;
     
 }
