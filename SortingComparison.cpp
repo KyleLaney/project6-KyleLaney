@@ -306,7 +306,6 @@ void SortingComparison::runComparison(data_distribution array_type) {
     }
     
     quickSortnumOfComparison = 0;
-    std::cout << std::endl;
     std::cout << "Selection sort comparisons: " << selectionSort(selectionSortvalues, SIZE) << std::endl;
     std::cout << std::endl;
     std::cout << "Insertion sort comparisons: " << insertionSort(insertionSortvalues, SIZE) << std::endl;
@@ -314,6 +313,5 @@ void SortingComparison::runComparison(data_distribution array_type) {
     std::cout << "Merge sort comparisons: " << mergeSort(mergeSortvalues,0 , SIZE-1) << std::endl;
     std::cout << std::endl;
     std::cout << "Quick sort comparisons: " << quickSort(quickSortvalues,0 , SIZE-1) << std::endl;
-    std::cout << std::endl;
     
 }
