@@ -269,6 +269,10 @@ void SortingComparison::runComparison(data_distribution array_type) {
     using namespace std;
     srand (time(NULL));
     values_ = new int[SIZE];
+    int* selectionSortvalues = new int[SIZE];
+    int* insertionSortvalues = new int[SIZE];
+    int* mergeSortvalues = new int[SIZE];
+    int* quickSortvalues = new int[SIZE];
     
     switch (array_type) {
         case RANDOM:
@@ -292,17 +296,25 @@ void SortingComparison::runComparison(data_distribution array_type) {
         default:
             break;
     }
-    int* selectionSortvalues = new int[SIZE];
-    memcpy(selectionSortvalues, values_, SIZE);
     
-    int* insertionSortvalues = new int[SIZE];
-    memcpy(insertionSortvalues, values_, SIZE);
+    for (int i = 0; i < SIZE; i++) {
+        selectionSortvalues[i] = values_[i];
+        insertionSortvalues[i] = values_[i];
+        mergeSortvalues[i] = values_[i];
+        quickSortvalues[i] = values_[i];
+    }
     
-    int* mergeSortvalues = new int[SIZE];
-    memcpy(mergeSortvalues, values_, SIZE);
-    
-    int* quickSortvalues = new int[SIZE];
-    memcpy(quickSortvalues, values_, SIZE);
+//    int* selectionSortvalues = new int[SIZE];
+//    memcpy(selectionSortvalues, values_, SIZE);
+//
+//    int* insertionSortvalues = new int[SIZE];
+//    memcpy(insertionSortvalues, values_, SIZE);
+//
+//    int* mergeSortvalues = new int[SIZE];
+//    memcpy(mergeSortvalues, values_, SIZE);
+//
+//    int* quickSortvalues = new int[SIZE];
+//    memcpy(quickSortvalues, values_, SIZE);
     quickSortnumOfComparison = 0;
     
     std::cout << "Selection sort comparisons: " << selectionSort(selectionSortvalues, SIZE) << std::endl;
