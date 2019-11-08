@@ -86,10 +86,15 @@ int SortingComparison::insertionSort(int a[], size_t size)
         // Move all larger elements up
         int j = i;
         numOfComparison++;
-        while (j > 0 && a[j - 1] > next)
+        while (j > 0)
         {
             numOfComparison++;
-            a[j] = a[j - 1];
+            if (a[j - 1] > next) {
+                a[j] = a[j - 1];
+                numOfComparison++;
+            } else {
+                break;
+            }
             j--;
         }
         // Insert the element
