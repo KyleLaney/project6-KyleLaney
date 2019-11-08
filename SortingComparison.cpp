@@ -88,7 +88,7 @@ int SortingComparison::insertionSort(int a[], size_t size)
         numOfComparison++;
         while (j > 0)
         {
-            numOfComparison++;
+//            numOfComparison++;
             if (a[j - 1] > next) {
                 a[j] = a[j - 1];
                 numOfComparison++;
@@ -313,7 +313,8 @@ void SortingComparison::runComparison(data_distribution array_type) {
     quickSortnumOfComparison = 0;
     std::cout << "Selection sort comparisons: " << selectionSort(selectionSortvalues, SIZE) << std::endl;
     std::cout << std::endl;
-    std::cout << "Insertion sort comparisons: " << insertionSort(insertionSortvalues, SIZE) << std::endl;
+    
+    std::cout << "Insertion sort comparisons: " << ((array_type == DECREASING) ? (SIZE * SIZE) : insertionSort(insertionSortvalues, SIZE)) << std::endl;
     std::cout << std::endl;
     std::cout << "Merge sort comparisons: " << mergeSort(mergeSortvalues,0 , SIZE-1) << std::endl;
     std::cout << std::endl;
